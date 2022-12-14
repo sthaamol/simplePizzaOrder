@@ -1,0 +1,116 @@
+
+<!-- Order Menu-->
+<table class="table table-bordered" style="width:70%">
+   <tbody>
+      <tr>
+         <td rowspan="2" [className]="'td-centre'">Toppings</td>
+         <td colspan="4" [className]="'td-centre'">Pizza Size</td>
+      </tr>
+      <tr>
+         <td [className]="'td-left'">Small($5)</td>
+         <td [className]="'td-left'">Medium($7)</td>
+         <td [className]="'td-left'">Large($8)</td>
+         <td [className]="'td-left'">Extra Large($9)</td>
+      </tr>
+      <tr>
+         <td colspan="5"> Veg Toppings</td>
+      </tr>
+      <tr>
+         <td rowspan="2">Tomatoes($1.00)</td>
+      </tr>
+      <tr >
+        <td (click)="getTomatoesTick(0)">
+            <img [src]="imagePath" alt="" [hidden]="clicked0"/>
+         </td>
+         <td (click)="getTomatoesTick(1)"><img [src]="imagePath" alt=""  [hidden]="clicked1" /></td>
+         <td (click)="getTomatoesTick(2)"><img [src]="imagePath" alt="" [hidden]="clicked2" /></td>
+         <td (click)="getTomatoesTick(3)"><img [src]="imagePath" alt="" [hidden]="clicked3" /></td> 
+         
+      </tr>
+      <tr>
+         <td rowspan="2">Onions($0.50)</td>
+      </tr>
+      <tr>
+         <td (click)="getOnionsTick(4)"><img [src]="imagePath" alt="" [hidden]="clicked4"/></td>
+         <td (click)="getOnionsTick(5)"><img [src]="imagePath" alt="" [hidden]="clicked5"/></td>
+         <td (click)="getOnionsTick(6)"><img [src]="imagePath" alt="" [hidden]="clicked6" /></td>
+         <td (click)="getOnionsTick(7)"><img [src]="imagePath" alt="" [hidden]="clicked7"/></td>
+      </tr>
+      <tr>
+         <td rowspan="2">Bell pepper($1.00)</td>
+      </tr>
+      <tr>
+         <td (click)="getBellPepperTick(8)"><img [src]="imagePath" alt="" [hidden]="clicked8" /></td>
+         <td (click)="getBellPepperTick(9)"><img [src]="imagePath" alt="" [hidden]="clicked9"/></td>
+         <td (click)="getBellPepperTick(10)"><img [src]="imagePath" alt="" [hidden]="clicked10"/></td>
+         <td (click)="getBellPepperTick(11)"><img [src]="imagePath" alt="" [hidden]="clicked11"/></td>
+      </tr>
+      <tr>
+         <td rowspan="2">Mushrooms($1.20)</td>
+      </tr>
+      <tr>
+         <td (click)="getMushroomsTick(12)"><img [src]="imagePath" alt="" [hidden]="clicked12"/></td>
+         <td (click)="getMushroomsTick(13)"><img [src]="imagePath" alt="" [hidden]="clicked13"/></td>
+         <td (click)="getMushroomsTick(14)"><img [src]="imagePath" alt="" [hidden]="clicked14"/></td>
+         <td (click)="getMushroomsTick(15)"><img [src]="imagePath" alt="" [hidden]="clicked15"/></td>
+      </tr>
+      <tr>
+         <td rowspan="2">Pineapple($0.75)</td>
+      </tr>
+      <tr>
+         <td (click)="getPineappleTick(16)"><img [src]="imagePath" alt="" [hidden]="clicked16"/></td>
+         <td (click)="getPineappleTick(17)"><img [src]="imagePath" alt="" [hidden]="clicked17"/></td>
+         <td (click)="getPineappleTick(18)"><img [src]="imagePath" alt="" [hidden]="clicked18"/></td>
+         <td (click)="getPineappleTick(19)"><img [src]="imagePath" alt=""[hidden]="clicked19" /></td>
+      </tr>
+      <tr>
+         <td colspan="5">Non Veg Toppings</td>
+      </tr>
+      <tr>
+         <td rowspan="2">Sausage($1.00)</td>
+      </tr>
+      <tr>
+         <td (click)="getSausageTick(20)"><img [src]="imagePath" alt="" [hidden]="clicked20"/></td>
+         <td (click)="getSausageTick(21)"><img [src]="imagePath" alt="" [hidden]="clicked21"/></td>
+         <td (click)="getSausageTick(22)"><img [src]="imagePath" alt="" [hidden]="clicked22"/></td>
+         <td (click)="getSausageTick(23)"><img [src]="imagePath" alt=""[hidden]="clicked23" /></td>
+      </tr>
+      <tr>
+         <td rowspan="2">Pepperoni($2.00)</td>
+      </tr>
+      <tr>
+         <td (click)="getPepperoniTick(24)"><img [src]="imagePath" alt="" [hidden]="clicked24"/></td>
+         <td (click)="getPepperoniTick(25)"><img [src]="imagePath" alt="" [hidden]="clicked25"/></td>
+         <td (click)="getPepperoniTick(26)"><img [src]="imagePath" alt="" [hidden]="clicked26"/></td>
+         <td (click)="getPepperoniTick(27)"><img [src]="imagePath" alt="" [hidden]="clicked27"/></td>
+      </tr>
+      <tr>
+         <td rowspan="2">Barbecue chicken($3.00)</td>
+      </tr>
+      <tr>
+         <td (click)="getBarbecueTick(28)"><img [src]="imagePath" alt="" [hidden]="clicked28"/></td>
+         <td (click)="getBarbecueTick(29)"><img [src]="imagePath" alt="" [hidden]="clicked29"/></td>
+         <td (click)="getBarbecueTick(30)"><img [src]="imagePath" alt="" [hidden]="clicked30"/></td>
+         <td (click)="getBarbecueTick(31)"><img [src]="imagePath" alt="" [hidden]="clicked31"/></td>
+      </tr>
+      <tr>
+         <td [className]="'td-blue'" colspan="5" >Total</td>
+      </tr>
+      <tr>
+         <td>Offer</td>
+         <td></td>
+         <td></td>
+         <td>Offer 3</td>
+         <td></td>
+      </tr>
+      <tr colspan="2">
+         <td></td>
+         <td>{{this.priceSmall}}</td>
+         <td>{{this.priceMd}}</td>
+         <td>
+            <del>{{this.priceLg}}</del><br /> {{this.offeredPriceLg}}
+         </td>
+         <td>{{this.priceXl}}</td>
+      </tr>
+   </tbody>
+</table>
